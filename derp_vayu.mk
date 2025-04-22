@@ -10,12 +10,18 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+DERP_BUILDTYPE := Official
+DERP_VERSION_APPEND_TIME_OF_DAY=true
+TARGET_NOT_USES_BLUR=true
+TARGET_USES_MINI_GAPPS := true
+USE_LEGACY_BOOTANIMATION := true
+WITH_GMS := true
 
 # Inherit from vayu device
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-PRODUCT_NAME := lineage_vayu
+PRODUCT_NAME := derp_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
