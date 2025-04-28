@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiPartsVayu
+    XiaomiPartsVayu \
+    RemovePackagesVayu
 
 # Fingerprint
 PRODUCT_PACKAGES += \
