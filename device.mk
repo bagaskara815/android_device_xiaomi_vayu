@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/qdcm/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackagesVayu
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
